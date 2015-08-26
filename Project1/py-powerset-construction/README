@@ -1,0 +1,47 @@
+
+
+    NFA-λtoDFA - README
+
+
+    DEPENDENCIES
+    ~~~~~~~~~~~~
+    pydot
+        Read and write DOT files.
+    NetworkX
+        Convenient and powerful graph representation.
+
+
+    INSTRUCTIONS FOR USE
+    ~~~~~~~~~~~~~~~~~~~~
+
+    NFA-λtoDFA <input file> <output file>
+
+
+    INPUT FILE
+    ~~~~~~~~~~
+    At present, it only supports DOT (graphviz) files.
+    UTF-8 and ASCII encodings work, others might too.
+    The start node requires a 'start' attribute and final nodes require a
+    'final' attribute, with any value.
+
+
+    FEATURES/LIMITATIONS
+    ~~~~~~~~~~~~~~~~~~~~
+    It requires an exact separator string between edge symbols.  You can set
+    the separator string to whatever you want, but you must abide by it when
+    specifying edge labels in the input file.  See the example files provided.
+
+    Arbitrary data/attributes are not supported.
+
+    It appears that pydot does not support HTML labels, so neither does this
+    script.
+
+    I only have Python 2 packages for NetworkX and pydot, so it is untested
+    with Python 3.
+
+
+    CONFIGURATION
+    ~~~~~~~~~~~~~
+    There are some global variables at the top of the source code that will
+    one day probably go into a configuration file, but for now you'll have to
+    edit them there.
